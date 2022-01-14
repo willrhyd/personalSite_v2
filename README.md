@@ -6,7 +6,7 @@ This site was created with [Create React App](https://github.com/facebook/create
 
 This site is my first time using React and I started out with a Sanity Blog Tutorial [here](https://www.sanity.io/guides/build-your-first-blog-using-react). Consequently I've used the Sanity.io content management tools and started using Tailwind for styling.
 
-The site is hosted on GitHub Pages and I push the updated build folder to a gh-pages branch on the repo when I want to update the content using a bash script script.
+The site is hosted on GitHub Pages and I push the updated build folder to a gh-pages branch on the repo when I want to update the content using a bash script .
 
 ## Difficulties Encountered
 
