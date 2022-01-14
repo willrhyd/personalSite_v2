@@ -1,0 +1,19 @@
+/* Stylesheet for non-tailwind styling */
+/* body{
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    body{
+        overflow:scroll;
+    }
+    
+} */
+.active{
+    color: white;
+    background-color: #334155;
+}
+
+br {
+    display:block
+}
