@@ -6,11 +6,14 @@ set -e
 # build
 npm run build
 
-cd build
+cd build 
 
-git add . && git commit -m "Build commit"
+git init
+git add -A
+git commit -m 'deploy'
 
-git subtree push --prefix build origin gh-pages
+git push -f git@github.com:willrhyd/personalSite_v2.git master:gh-pages
+
 
 
 
