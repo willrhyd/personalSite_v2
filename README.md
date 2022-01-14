@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# My Personal Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This site was created with [Create React App](https://github.com/facebook/create-react-app), and uses Sanity.io for content management. My use for the site is to blog about personal projects, or anything I have an interest in really, and to showcase my personal web development projects.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+This site is my first time using React and I started out with a Sanity Blog Tutorial [here](https://www.sanity.io/guides/build-your-first-blog-using-react). Consequently I've used the Sanity.io content management tools and started using Tailwind for styling.
 
-### `npm start`
+The site is hosted on GitHub Pages and I push the updated build folder to a gh-pages branch on the repo when I want to update the content using a bash script script.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Difficulties Encountered
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For my first time using React and writing .jsx, I didn't find it too difficult to get used to. It possible helped that I've worked with Vue a bit before so understood most of the ideas from that. 
 
-### `npm test`
+I found it a little challenging getting Tailwind configured so that it compiles the CSS file on build/run, and didn't manage to get it configured so that it automatically rebuilt the CSS file. In the end my scripts in `package.json` looked like this: <br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "tailwind -i src/styles/tailwind.css -o src/index.css",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css "
 
-### `npm run build`
+Overall I learnt a bit about how the script commands work and how tailwind processes the classes into useable CSS to be rendered.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The other issue I had was with parsing the block content from Sanity. The main sticking point was line breaks initially. Following some research I found out about serializing the content and succeded in setting up the serializer to put line breaks in and style the images how I wanted.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

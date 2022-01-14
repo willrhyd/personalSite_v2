@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import AllPosts from "./components/AllPosts.js";
 import OnePost from "./components/OnePost.js";
 import Navbar from "./components/Navbar.js";
@@ -14,7 +14,7 @@ function App() {
     //no idea what <> does.... but needed apparently
   <> 
   
-    <BrowserRouter>
+    <HashRouter>
     <Navbar
     ></Navbar>
       <Routes>
@@ -24,7 +24,7 @@ function App() {
         <Route  path="/projects" exact element={<AllProjects />}/>
         <Route  path="/projects/:slug" element={<OnePost />}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </>
   );
 }
