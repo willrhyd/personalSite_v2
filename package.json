@@ -1,5 +1,6 @@
 {
   "name": "sanity-react",
+  "homepage": "https://willrhyd.github.io/personalSite_v2/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
